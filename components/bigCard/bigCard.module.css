@@ -8,6 +8,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	position: relative;
+	margin-bottom: 30px;
 }
 
 .fullCard .bigText {
@@ -44,4 +45,14 @@
 
 .contentWrapper {
 	z-index: 2;
+}
+
+@media (max-width: 480px) {
+	.fullCard {
+		width: 90%;
+		height: 350px;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-bottom: 30px;
+	}
 }

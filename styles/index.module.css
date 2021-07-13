@@ -18,3 +18,10 @@
 	margin: 20px;
 	flex-grow: 1;
 }
+
+@media (max-width: 480px) {
+	.itemWrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
