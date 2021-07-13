@@ -10,7 +10,7 @@ export default class Header extends React.Component {
 				home: {
 					title: "Home",
 					link: "/",
-					selected: true,
+					selected: false,
 				},
 				list: {
 					title: "List",
@@ -19,6 +19,16 @@ export default class Header extends React.Component {
 				},
 			},
 		};
+	}
+
+	componentDidMount() {
+		const { tag } = this.props;
+		const { menu } = this.state;
+
+		if (menu[tag] != undefined) {
+			menu[tag].selected = true;
+			this.setState({ menu: menu });
+		}
 	}
 
 	render() {
