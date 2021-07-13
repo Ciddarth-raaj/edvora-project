@@ -1,26 +1,18 @@
 import React from "react";
 
-import styles from "./bigCard.module.css";
+import styles from "./mediumCard.module.css";
 
-export default class BigCard extends React.Component {
+export default class MediumCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
 
 	render() {
-		const {
-			backgroundImage,
-			backgroundColor,
-			title,
-			subText,
-			wrapperStyle,
-		} = this.props;
+		const { backgroundImage, backgroundColor, title, subText, image } =
+			this.props;
 		return (
-			<div
-				className={styles.fullCard}
-				style={{ backgroundColor, ...wrapperStyle }}
-			>
+			<div className={styles.fullCard} style={{ backgroundColor }}>
 				{backgroundImage && (
 					<div className={styles.imageWrapper}>
 						<span />
@@ -28,6 +20,7 @@ export default class BigCard extends React.Component {
 					</div>
 				)}
 				<div className={styles.contentWrapper}>
+					<img src={image} className={styles.spriteImage} />
 					<p className={styles.bigText}>{title}</p>
 					<p className={styles.subText}>{subText}</p>
 				</div>
