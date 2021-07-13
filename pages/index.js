@@ -20,7 +20,7 @@ export default class Index extends React.Component {
 							backgroundImage={"./assets/backgrounds/forest.jpg"}
 							title={"All in One"}
 							subText={"Pokemon Browser"}
-							wrapperStyle={{ marginBottom: 50, marginTop: 20 }}
+							wrapperStyle={{ marginBottom: 30, marginTop: 20 }}
 						/>
 						<div className={styles.mediumItemWrapper}>
 							<MediumCard
