@@ -36,7 +36,7 @@ export default class Header extends React.Component {
 		return (
 			<div className={styles.wrapper}>
 				<img
-					src={"./assets/logo/main-logo.png"}
+					src={"/assets/logo/main-logo.png"}
 					className={styles.logo}
 				/>
 

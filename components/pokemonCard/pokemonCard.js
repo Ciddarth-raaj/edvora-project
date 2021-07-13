@@ -9,10 +9,22 @@ export default class PokemonCard extends React.Component {
 	}
 
 	render() {
-		const { backgroundImage, backgroundColor, title, subText, image } =
-			this.props;
+		const {
+			backgroundImage,
+			backgroundColor,
+			title,
+			subText,
+			image,
+			pokemonId,
+		} = this.props;
 		return (
-			<div className={styles.card} style={{ backgroundColor }}>
+			<div
+				className={styles.card}
+				style={{ backgroundColor }}
+				onClick={() =>
+					(window.location = `/pokemon/${pokemonId}/${title}`)
+				}
+			>
 				{backgroundImage && (
 					<div className={styles.imageWrapper}>
 						<span />
