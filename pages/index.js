@@ -27,19 +27,19 @@ export default class Index extends React.Component {
 								backgroundColor={"pink"}
 								image={"./assets/sprites/113.png"}
 								title={"Chansey"}
-								subText={"#Trending"}
+								subText={"#113"}
 							/>
 							<MediumCard
 								backgroundColor={"#89CFF0"}
 								image={"./assets/sprites/007.png"}
 								title={"Squirtle"}
-								subText={"#Water Type"}
+								subText={"#007"}
 							/>
 							<MediumCard
 								backgroundColor={"#FCEF91"}
 								image={"./assets/sprites/025.png"}
 								title={"Pikachu"}
-								subText={"#Cute"}
+								subText={"#025"}
 							/>
 						</div>
 					</div>

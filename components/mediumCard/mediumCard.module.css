@@ -1,16 +1,17 @@
-.fullCard {
+.card {
 	width: 50vh;
 	height: 50vh;
 	background-color: red;
 	padding: 20px;
 	border-radius: 30px;
+	cursor: pointer;
 }
 
-.fullCard .bigText {
+.card .bigText {
 	font-size: 52px;
 }
 
-.fullCard .subText {
+.card .subText {
 	font-size: 22px;
 }
 
@@ -36,6 +37,15 @@
 	object-fit: cover;
 	border-radius: 30px;
 	z-index: 1;
+	transition: 0.3s;
+}
+
+.card img {
+	transition: 0.3s;
+}
+
+.card:hover img {
+	transform: translate(0, -10px);
 }
 
 .contentWrapper {

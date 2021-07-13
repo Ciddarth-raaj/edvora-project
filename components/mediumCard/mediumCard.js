@@ -12,7 +12,7 @@ export default class MediumCard extends React.Component {
 		const { backgroundImage, backgroundColor, title, subText, image } =
 			this.props;
 		return (
-			<div className={styles.fullCard} style={{ backgroundColor }}>
+			<div className={styles.card} style={{ backgroundColor }}>
 				{backgroundImage && (
 					<div className={styles.imageWrapper}>
 						<span />
