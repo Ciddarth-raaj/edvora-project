@@ -16,12 +16,17 @@ export default class PokemonCard extends React.Component {
 			subText,
 			image,
 			pokemonId,
+			redirect,
 		} = this.props;
 		return (
 			<div
 				className={styles.card}
-				style={{ backgroundColor }}
+				style={{
+					backgroundColor: backgroundColor,
+					cursor: redirect ? "pointer" : "unset",
+				}}
 				onClick={() =>
+					redirect &&
 					(window.location = `/pokemon/${pokemonId}/${title}`)
 				}
 			>

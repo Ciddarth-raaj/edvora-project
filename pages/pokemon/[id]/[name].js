@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../../../styles/pokemon-data.module.css";
 
 import GlobalWrapper from "../../../components/globalWrapper/globalWrapper";
+import PokemonCard from "../../../components/pokemonCard/pokemonCard";
 
 import PokemonHelper from "../../../helper/pokemon";
 
@@ -27,8 +28,20 @@ export default class PokemonData extends React.Component {
 	}
 
 	render() {
-		const { name } = this.state;
-		return <GlobalWrapper pageTitle={name}></GlobalWrapper>;
+		const { name, pokemon_id } = this.state;
+		return (
+			<GlobalWrapper pageTitle={name}>
+				<div className={styles.wrapper}>
+					<PokemonCard
+						backgroundColor={"pink"}
+						image={"/assets/sprites/113.png"}
+						title={name}
+						subText={`#${pokemon_id}`}
+						pokemonId={pokemon_id}
+					/>
+				</div>
+			</GlobalWrapper>
+		);
 	}
 }
 

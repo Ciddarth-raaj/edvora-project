@@ -31,6 +31,7 @@ export default class Index extends React.Component {
 								title={"Chansey"}
 								subText={"#113"}
 								pokemonId={"113"}
+								redirect={true}
 							/>
 							<PokemonCard
 								backgroundColor={"#89CFF0"}
@@ -38,6 +39,7 @@ export default class Index extends React.Component {
 								title={"Squirtle"}
 								subText={"#007"}
 								pokemonId={"7"}
+								redirect={true}
 							/>
 							<PokemonCard
 								backgroundColor={"#FCEF91"}
@@ -45,6 +47,7 @@ export default class Index extends React.Component {
 								title={"Pikachu"}
 								subText={"#025"}
 								pokemonId={"25"}
+								redirect={true}
 							/>
 						</div>
 					</div>
