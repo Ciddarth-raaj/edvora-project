@@ -37,14 +37,14 @@ export default class Index extends React.Component {
 								image={"/assets/sprites/007.png"}
 								title={"Squirtle"}
 								subText={"#007"}
-								pokemonId={"007"}
+								pokemonId={"7"}
 							/>
 							<PokemonCard
 								backgroundColor={"#FCEF91"}
 								image={"/assets/sprites/025.png"}
 								title={"Pikachu"}
 								subText={"#025"}
-								pokemonId={"025"}
+								pokemonId={"25"}
 							/>
 						</div>
 					</div>
