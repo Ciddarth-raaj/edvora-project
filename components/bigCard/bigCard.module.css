@@ -1,0 +1,47 @@
+.fullCard {
+	width: 90vw;
+	height: 25vw;
+	background-color: red;
+	padding: 20px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+}
+
+.fullCard .bigText {
+	font-size: 52px;
+}
+
+.fullCard .subText {
+	font-size: 22px;
+}
+
+.imageWrapper {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.imageWrapper span {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	position: absolute;
+}
+
+.imageWrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 30px;
+	z-index: 1;
+}
+
+.contentWrapper {
+	z-index: 2;
+}

@@ -17,7 +17,7 @@ export default class GlobalWrapper extends React.Component {
 			<div>
 				<Head title={pageTitle} />
 				<Header tag={pageTag} />
-				{children}
+				<div className={styles.childDiv}>{children}</div>
 			</div>
 		);
 	}

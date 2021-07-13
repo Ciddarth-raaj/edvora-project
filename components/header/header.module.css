@@ -2,12 +2,13 @@
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
-	padding: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
 	position: fixed;
 	align-items: center;
 	justify-content: space-between;
+	height: 100px;
+	top: 0;
 }
 
 .logo {
