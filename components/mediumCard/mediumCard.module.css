@@ -40,6 +40,8 @@
 
 .card:hover img {
 	transform: translate(0, -10px);
+	-webkit-filter: drop-shadow(2px 20px 15px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(2px 20px 15px rgba(0, 0, 0, 0.3));
 }
 
 .contentWrapper {
