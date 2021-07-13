@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from "./mediumCard.module.css";
+import styles from "./pokemonCard.module.css";
 
-export default class MediumCard extends React.Component {
+export default class PokemonCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};

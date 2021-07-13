@@ -4,7 +4,7 @@ import styles from "../styles/index.module.css";
 
 import GlobalWrapper from "../components/globalWrapper/globalWrapper";
 import BigCard from "../components/bigCard/bigCard";
-import MediumCard from "../components/mediumCard/mediumCard";
+import PokemonCard from "../components/pokemonCard/pokemonCard";
 export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
@@ -25,19 +25,19 @@ export default class Index extends React.Component {
 							}}
 						/>
 						<div className={styles.mediumItemWrapper}>
-							<MediumCard
+							<PokemonCard
 								backgroundColor={"pink"}
 								image={"./assets/sprites/113.png"}
 								title={"Chansey"}
 								subText={"#113"}
 							/>
-							<MediumCard
+							<PokemonCard
 								backgroundColor={"#89CFF0"}
 								image={"./assets/sprites/007.png"}
 								title={"Squirtle"}
 								subText={"#007"}
 							/>
-							<MediumCard
+							<PokemonCard
 								backgroundColor={"#FCEF91"}
 								image={"./assets/sprites/025.png"}
 								title={"Pikachu"}
