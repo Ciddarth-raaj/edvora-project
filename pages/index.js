@@ -26,7 +26,6 @@ export default class Index extends React.Component {
 						/>
 						<div className={styles.mediumItemWrapper}>
 							<PokemonCard
-								backgroundColor={"pink"}
 								image={"/assets/sprites/113.png"}
 								title={"Chansey"}
 								subText={"#113"}
@@ -34,7 +33,6 @@ export default class Index extends React.Component {
 								redirect={true}
 							/>
 							<PokemonCard
-								backgroundColor={"#89CFF0"}
 								image={"/assets/sprites/007.png"}
 								title={"Squirtle"}
 								subText={"#007"}
@@ -42,7 +40,6 @@ export default class Index extends React.Component {
 								redirect={true}
 							/>
 							<PokemonCard
-								backgroundColor={"#FCEF91"}
 								image={"/assets/sprites/025.png"}
 								title={"Pikachu"}
 								subText={"#025"}

@@ -46,7 +46,6 @@ export default class PokemonData extends React.Component {
 			<GlobalWrapper pageTitle={name}>
 				<div className={styles.wrapper}>
 					<PokemonCard
-						backgroundColor={"pink"}
 						image={image}
 						title={name}
 						subText={`#${pokemon_id}`}
