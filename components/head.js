@@ -7,14 +7,14 @@ const defaultDescription = "";
 const defaultKeywords = "";
 const defaultOGURL = "";
 const defaultOGImage = "/assets/logo-square.png";
-const defaultTitle = "Hospisource";
+const defaultTitle = "Pokemon";
 
 const Head = (props) => (
 	<NextHead>
 		<meta charSet="UTF-8" />
 		<title>
 			{props.title !== undefined
-				? `${props.title} | Hospisource`
+				? `${props.title} | ${defaultTitle}`
 				: defaultTitle}
 		</title>
 		<meta

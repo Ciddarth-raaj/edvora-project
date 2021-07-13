@@ -1,7 +1,9 @@
 import React from "react";
 
-import Header from "../components/header/header";
-import Head from "../components/head";
+// import Header from "../components/header/header";
+// import Head from "../components/head";
+
+import GlobalWrapper from "../components/globalWrapper/globalWrapper";
 export default class Index extends React.Component {
 	constructor(props) {
 		super(props);
@@ -10,9 +12,11 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<div style={{ backgroundColor: "black", height: 100 }}>
-				<Head />
-				<Header />
+			<div>
+				<GlobalWrapper
+					pageTitle={"Home"}
+					pageTag={"home"}
+				></GlobalWrapper>
 			</div>
 		);
 	}
