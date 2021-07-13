@@ -9,6 +9,7 @@
 
 .card .bigText {
 	font-size: 52px;
+	text-transform: capitalize;
 }
 
 .card .subText {

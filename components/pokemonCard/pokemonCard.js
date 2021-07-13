@@ -37,7 +37,9 @@ export default class PokemonCard extends React.Component {
 					</div>
 				)}
 				<div className={styles.contentWrapper}>
-					<img src={image} className={styles.spriteImage} />
+					{image && (
+						<img src={image} className={styles.spriteImage} />
+					)}
 					<p className={styles.bigText}>{title}</p>
 					<p className={styles.subText}>{subText}</p>
 				</div>

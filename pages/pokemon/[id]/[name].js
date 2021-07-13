@@ -13,6 +13,7 @@ export default class PokemonData extends React.Component {
 		this.state = {
 			name: props.name,
 			pokemon_id: props.id,
+			image: undefined,
 		};
 	}
 
@@ -23,18 +24,30 @@ export default class PokemonData extends React.Component {
 
 	getPokemon(pokemon_id) {
 		PokemonHelper.getWithId(pokemon_id)
-			.then((data) => console.log(data))
+			.then((data) => {
+				let image = undefined;
+				if (data.sprites?.other["official-artwork"]?.front_default) {
+					image =
+						data.sprites?.other["official-artwork"].front_default;
+				} else {
+					image = data.sprites?.front_default;
+				}
+				this.setState({
+					image: image,
+					name: data.name,
+				});
+			})
 			.catch((err) => console.log(err));
 	}
 
 	render() {
-		const { name, pokemon_id } = this.state;
+		const { name, pokemon_id, image } = this.state;
 		return (
 			<GlobalWrapper pageTitle={name}>
 				<div className={styles.wrapper}>
 					<PokemonCard
 						backgroundColor={"pink"}
-						image={"/assets/sprites/113.png"}
+						image={image}
 						title={name}
 						subText={`#${pokemon_id}`}
 						pokemonId={pokemon_id}
