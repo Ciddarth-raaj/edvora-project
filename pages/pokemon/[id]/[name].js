@@ -4,6 +4,7 @@ import styles from "../../../styles/pokemon-data.module.css";
 
 import GlobalWrapper from "../../../components/globalWrapper/globalWrapper";
 import PokemonCard from "../../../components/pokemonCard/pokemonCard";
+import MediumCard from "../../../components/mediumCard/mediumCard";
 
 import PokemonHelper from "../../../helper/pokemon";
 
@@ -14,6 +15,7 @@ export default class PokemonData extends React.Component {
 			name: props.name,
 			pokemon_id: props.id,
 			image: undefined,
+			types: [],
 		};
 	}
 
@@ -25,23 +27,17 @@ export default class PokemonData extends React.Component {
 	getPokemon(pokemon_id) {
 		PokemonHelper.getWithId(pokemon_id)
 			.then((data) => {
-				let image = undefined;
-				if (data.sprites?.other["official-artwork"]?.front_default) {
-					image =
-						data.sprites?.other["official-artwork"].front_default;
-				} else {
-					image = data.sprites?.front_default;
-				}
 				this.setState({
-					image: image,
+					image: data.image,
 					name: data.name,
+					types: data.types,
 				});
 			})
 			.catch((err) => console.log(err));
 	}
 
 	render() {
-		const { name, pokemon_id, image } = this.state;
+		const { name, pokemon_id, image, types } = this.state;
 		return (
 			<GlobalWrapper pageTitle={name}>
 				<div className={styles.wrapper}>
@@ -51,6 +47,9 @@ export default class PokemonData extends React.Component {
 						subText={`#${pokemon_id}`}
 						pokemonId={pokemon_id}
 					/>
+					{types.map((t) => (
+						<MediumCard image={image} title={t} subText={`Type`} />
+					))}
 				</div>
 			</GlobalWrapper>
 		);

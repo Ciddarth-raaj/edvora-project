@@ -3,3 +3,12 @@
 	flex-wrap: wrap;
 	padding: 30px;
 }
+
+.wrapper > div:first-child {
+	width: 100%;
+}
+
+.wrapper > div {
+	margin: 20px;
+	flex-grow: 1;
+}
