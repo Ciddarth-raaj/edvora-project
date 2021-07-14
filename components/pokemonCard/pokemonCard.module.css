@@ -9,10 +9,6 @@
 .card .bigText {
 	font-size: 52px;
 	text-transform: capitalize;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	width: 40vh;
 }
 
 .card .subText {
@@ -60,4 +56,13 @@
 .spriteImage {
 	width: 50%;
 	object-fit: contain;
+}
+
+@media (max-width: 480px) {
+	.card .bigText {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 40vh;
+	}
 }
