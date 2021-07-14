@@ -6,7 +6,7 @@ import { string } from "prop-types";
 const defaultDescription = "";
 const defaultKeywords = "";
 const defaultOGURL = "";
-const defaultOGImage = "/assets/logo-square.png";
+const defaultOGImage = "/assets/icon/fav-icon.png";
 const defaultTitle = "Pokemon";
 
 const Head = (props) => (
