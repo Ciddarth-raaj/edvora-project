@@ -50,7 +50,7 @@ const Head = (props) => (
 			property="og:title"
 			content={
 				props.title !== undefined
-					? `${props.title} | Hospisource`
+					? `${props.title} | ${defaultTitle}`
 					: defaultTitle
 			}
 		/>
