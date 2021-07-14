@@ -16,6 +16,7 @@ export default class PokemonData extends React.Component {
 			pokemon_id: props.id,
 			image: undefined,
 			types: [],
+			stats: [],
 			weight: "",
 			height: "",
 		};
@@ -33,6 +34,7 @@ export default class PokemonData extends React.Component {
 					image: data.image,
 					name: data.name,
 					types: data.types,
+					stats: data.stats,
 					height: data.height,
 					weight: data.weight,
 				});
@@ -41,7 +43,8 @@ export default class PokemonData extends React.Component {
 	}
 
 	render() {
-		const { name, pokemon_id, image, types, weight, height } = this.state;
+		const { name, pokemon_id, image, types, stats, weight, height } =
+			this.state;
 		return (
 			<GlobalWrapper pageTitle={name}>
 				<div className={styles.wrapper}>
@@ -64,6 +67,13 @@ export default class PokemonData extends React.Component {
 						title={weight}
 						subText={"Weight"}
 					/>
+					{stats.map((s) => (
+						<MediumCard
+							image={image}
+							title={s.value}
+							subText={s.type}
+						/>
+					))}
 				</div>
 			</GlobalWrapper>
 		);

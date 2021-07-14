@@ -16,25 +16,39 @@ const pokemon = {
 				});
 		}),
 	format: (data) => {
-		const formatted = {};
-
-		formatted.name = data.name; //Pokemon Name
+		let image = undefined;
 		if (data.sprites?.other["official-artwork"]?.front_default) {
 			//Pokemon Sprite Image
-			formatted.image =
-				data.sprites?.other["official-artwork"].front_default;
+			image = data.sprites?.other["official-artwork"].front_default;
 		} else {
-			formatted.image = data.sprites?.front_default;
+			image = data.sprites?.front_default;
 		}
 
-		formatted.types = []; //Initilise pokemon types array
+		const types = []; //Initilise pokemon types array
+
 		for (let f of data.types) {
 			//Loop through the type and store in an easier format
-			formatted.types.push(f.type.name);
+			types.push(f.type.name);
 		}
 
-		formatted.weight = data.weight;
-		formatted.height = data.height;
+		const stats = []; //Initalise pokemon stats array
+
+		for (let s of data.stats) {
+			//Loop through the stats and store in an easier format
+			stats.push({
+				value: s.base_stat,
+				type: s.stat.name.replace("-", " "),
+			});
+		}
+
+		const formatted = {
+			name: data.name,
+			image: image,
+			types: types,
+			stats: stats,
+			weight: data.weight,
+			height: data.weight,
+		};
 
 		return formatted;
 	},
