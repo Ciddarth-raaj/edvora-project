@@ -15,12 +15,11 @@ export default function mediumCard(props) {
 		redirect,
 	} = props;
 	const { data } = usePalette(image);
-	console.log(data);
 	return (
 		<div
 			className={styles.card}
 			style={{
-				backgroundColor: backgroundColor || data.lightVibrant,
+				backgroundColor: backgroundColor || data.darkVibrant,
 				cursor: redirect ? "pointer" : "unset",
 			}}
 			onClick={() =>

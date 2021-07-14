@@ -33,6 +33,9 @@ const pokemon = {
 			formatted.types.push(f.type.name);
 		}
 
+		formatted.weight = data.weight;
+		formatted.height = data.height;
+
 		return formatted;
 	},
 };
