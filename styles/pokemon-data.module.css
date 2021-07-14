@@ -5,7 +5,8 @@
 }
 
 .wrapper > div:first-child {
-	width: 100%;
+	/* width: 100%; */
+	flex-grow: 200;
 }
 
 .wrapper > div {
