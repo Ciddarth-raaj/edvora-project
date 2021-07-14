@@ -30,21 +30,21 @@ const Head = (props) => (
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/assets/favicon.jpg"
+			href="/assets/icon/fav-icon.png"
 		/>
 		<link
 			rel="icon"
 			type="image"
 			sizes="32x32"
-			href="/assets/favicon.jpg"
+			href="/assets/icon/fav-icon.png"
 		/>
-		<link rel="shortcut icon" href="/assets/favicon.jpg" />
+		<link rel="shortcut icon" href="/assets/icon/fav-icon.png" />
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/assets/favicon.jpg"
+			href="/assets/icon/fav-icon.png"
 		/>
-		<link rel="icon" href="/assets/favicon.jpg" color="#000000" />
+		<link rel="icon" href="/assets/icon/fav-icon.png" color="#000000" />
 		<meta property="og:url" content={props.url || defaultOGURL} />
 		<meta
 			property="og:title"
