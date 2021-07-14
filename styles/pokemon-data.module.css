@@ -13,3 +13,9 @@
 	margin: 20px;
 	flex-grow: 1;
 }
+
+@media (max-width: 480px) {
+	.wrapper {
+		padding: 0;
+	}
+}
