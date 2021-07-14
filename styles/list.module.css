@@ -1,0 +1,21 @@
+.mediumItemWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+.mediumItemWrapper > div {
+	margin: 20px;
+	flex-grow: 1;
+}
+
+@media (max-width: 480px) {
+	.mediumItemWrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}

@@ -14,7 +14,7 @@ export default class Header extends React.Component {
 				},
 				list: {
 					title: "List",
-					link: "/",
+					link: "/list",
 					selected: false,
 				},
 			},
@@ -38,6 +38,7 @@ export default class Header extends React.Component {
 				<img
 					src={"/assets/logo/main-logo.png"}
 					className={styles.logo}
+					onClick={() => (window.location = "/")}
 				/>
 
 				<div className={styles.menuList}>

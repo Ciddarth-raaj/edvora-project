@@ -52,6 +52,45 @@ const pokemon = {
 
 		return formatted;
 	},
+	getAll: (offset, limit) =>
+		new Promise(function (resolve, reject) {
+			API.get(`pokemon?limit=${limit}&offset=${offset}`)
+				.then(async (res) => {
+					if (res.status === 200) {
+						resolve(pokemon.formatMultiple(res.data.results));
+					} else {
+						reject(res.data.msg);
+					}
+				})
+				.catch((err) => {
+					reject(err);
+				});
+		}),
+	formatMultiple: async (data, type) => {
+		const formatted = [];
+
+		for (let d of data) {
+			let pokemon_id = undefined;
+			if (type != undefined && type == "get") {
+				pokemon_id = d;
+			} else {
+				const url_split = d.url.split("/");
+				pokemon_id = url_split[url_split.length - 2];
+			}
+			const pokemonData = await pokemon.getWithId(pokemon_id);
+			formatted.push({
+				pokemon_id: pokemon_id,
+				name: pokemonData.name,
+				image: pokemonData.image,
+			});
+		}
+
+		return formatted;
+	},
+	getMany: (pokemon_ids) =>
+		new Promise(function (resolve, reject) {
+			resolve(pokemon.formatMultiple(pokemon_ids, "get"));
+		}),
 };
 
 export default pokemon;
