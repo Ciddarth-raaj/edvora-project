@@ -14,24 +14,30 @@ export default class Index extends React.Component {
 		super(props);
 		this.state = {
 			pokemon_list: [],
+			loading: true,
 			offset: 0,
 		};
 	}
 
 	componentDidMount() {
 		window.addEventListener("scroll", this.trackScrolling);
-
 		this.getPokemon();
 	}
 
 	getPokemon() {
 		const { offset, pokemon_list } = this.state;
-		this.setState({ offset: offset + ITEM_LIMIT });
+		this.setState({ offset: offset + ITEM_LIMIT, loading: true });
 		PokemonHelper.getAll(offset, ITEM_LIMIT)
 			.then((data) => {
-				this.setState({ pokemon_list: [...pokemon_list, ...data] });
+				this.setState({
+					pokemon_list: [...pokemon_list, ...data],
+					loading: true,
+				});
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => {
+				console.log(err);
+				this.setState({ loading: true });
+			});
 	}
 
 	trackScrolling = () => {
@@ -47,7 +53,7 @@ export default class Index extends React.Component {
 	};
 
 	render() {
-		const { pokemon_list } = this.state;
+		const { pokemon_list, loading } = this.state;
 		return (
 			<div>
 				<GlobalWrapper pageTitle={"List"} pageTag={"list"}>
@@ -62,6 +68,11 @@ export default class Index extends React.Component {
 							/>
 						))}
 					</div>
+					{loading && (
+						<div class="stage">
+							<div class="dot-floating"></div>
+						</div>
+					)}
 				</GlobalWrapper>
 			</div>
 		);
